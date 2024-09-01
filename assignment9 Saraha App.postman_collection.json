@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "07c04c24-00f3-4deb-8bce-e8c07f390494",
+		"name": "assignment9 Saraha App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23225128"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "userRegisteration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"yaraboualsoods\",\r\n    \"email\" : \"yarasmaher@gmail.com\",\r\n    \"password\": \"yara12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"yarasmaher@gmail.com\",\r\n    \"password\": \"yara12345678\",\r\n    \"otp\": \"669948\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "sendMessages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"third message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/66d3ef23c9b232b80136124d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"66d3ef23c9b232b80136124d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "yaraeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDNiMGRjNzdlMDM1ODE2NGFmMjhmYiIsImlhdCI6MTcyNTE2NTA1MX0.SgwpM-PT8pYFFjORZUij3OS5hMsKEHJNSW4yYbH8Rnk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMessages",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "yaraeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDNlZjIzYzliMjMyYjgwMTM2MTI0ZCIsImlhdCI6MTcyNTE2NTQ3OX0.nNGWwB8VKkTOTIuTjbWeeY3KX0wmA5PL-iNDlquf6Ss",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/messages/66d3f3ce69d0d5cfbc7cc1ec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"66d3f3ce69d0d5cfbc7cc1ec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
